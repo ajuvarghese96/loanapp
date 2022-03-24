@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center">XXYY BANK</h1>
+<div class="card text-white bg-dark mb-3" style="max-width: 30rem;margin-top:100px;margin-left:550px">
+      <a href="{% url 'index' %}"style="color:white;text-decoration:none;">  <h4 style="float:right;">X</h4></a>
+  <div class="card-header"><h2 style="color:red">Applicant Detail</h2></div>
+  <div class="card-body">
+
+    <h5 class="card-text">Name : {{detail.name}}<br><br>
+        Nationality : {{detail.nationality}}<br><br>
+        Date of Birth : {{ detail.dob }}<br><br>
+        Gender : {{detail.gender}}<br><br>
+        Martial Status : {{detail.martial}}<br><br>
+        Email : {{detail.email}}<br><br>
+            Address : {{detail.address}}<br><br>
+        Mobile :{{detail.mobile}}</h5>
+  </div>
+</div>
+
+{% endblock %}

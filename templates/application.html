@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container" style = "width:700px; margin-top:50px;margin-bottom:100px">
+    <a href="{% url 'index' %}"><button class="btn btn-danger" style="float:right">Home</button></a>
+    <h1 class="text-center text-success">Loan Application</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p }}
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+body{
+background-color:#f7daa1;}
+table,th,td{
+border:1px solid black;
+text-align:center;
+}
+table th{
+background-color:#ffe282}
+
+.list{
+margin-top:200px;
+}
+
+.button{
+margin-bottom:30px;
+float:right
+}

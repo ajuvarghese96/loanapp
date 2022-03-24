@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center">XXYY BANK</h1>
+    <div class="list">
+           <div class="button">
+    <a href="{% url 'apply' %}"><button class="btn btn-success">Loan Application</button></a>
+</div>
+<table width="100%">
+    <tr>
+        <th>Loan Number </th>
+        <th>Applicant Name</th>
+        <th>Loan type</th>
+        <th>Loan Amount</th>
+        <th>Loan Period</th>
+        <th>Application Date</th>
+        <th>Loan Status</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td><a href="{{user.applicant_detail.id}}"style="color:black;text-decoration:none;">{{ user.application_num}}</a></td>
+        <td>{{user.applicant_detail.name}}</td>
+        <td>{{user.application_type}}</td>
+        <td>{{ user.finance_amount}}</td>
+        <td>{{ user.finance_period}}</td>
+        <td>{{ user.application_date}}</td>
+        <td>{{user.loan_status}}</td>
+    </tr>
+    {% endfor %}
+</table>
+    </div>
+</div>
+
+
+{% endblock %}
